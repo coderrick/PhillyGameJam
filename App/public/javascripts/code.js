@@ -15,8 +15,10 @@ var camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeigh
 var scene = new THREE.Scene();
 
 //Light
-var light = new THREE.AmbientLight(0xffffff, 0.5);
+var light = new THREE.AmbientLight(0xffffff, 0.5);//this light illuminates the entire scene
 scene.add(light);
+var pointLight = new THREE.PointLight(0xffffff, 0.5);//this light shines from a single point
+scene.add(pointLight);
 
 //Geometry + mesh
 var geometry = new THREE.BoxGeometry(100, 100, 100);
