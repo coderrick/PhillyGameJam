@@ -6,7 +6,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
   </head>
   <body>
-    
+    <script type="x-shader/x-vertex" id="vertexShader">
+    //Shaders allow you to create your own materials
+    void main()
+    {
+       vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+       gl_Position = projectionMatrix * modelViewPosition;//The position of each vertwx in the mesh
+    }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentShader">
+    void main()
+    {
+      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);//RBG color value for each pixel with the fragment
+    }
+    </script>
     
     <canvas id="c"></canvas>
     <script src="javascripts/code.js"></script>
