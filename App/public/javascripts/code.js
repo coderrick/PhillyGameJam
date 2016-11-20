@@ -14,9 +14,14 @@ var camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeigh
 //Scene
 var scene = new THREE.Scene();
 
-//Geometry
+//Light
+var light = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(light);
+
+//Geometry + mesh
 var geometry = new THREE.BoxGeometry(100, 100, 100);
-var material = new THREE.MeshBasicMaterial();
+//var material = new THREE.MeshBasicMaterial(); this material does not respond to light
+var material = new THREE.MeshLambertMaterial({color: 0xF3FFE2});
 var mesh = new THREE.Mesh(geometry, material);
 //NOTE camera position is set to (0, 0, 0) by default; geo will not be scene unless position is reset as shown below:
 mesh.position.set(0, 0, -1000);
