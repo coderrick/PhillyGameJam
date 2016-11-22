@@ -8,6 +8,8 @@
   <body>
     <script type="x-shader/x-vertex" id="vertexShader">
     //Shaders allow you to create your own materials
+    //uniforms
+    //attributes
     void main()
     {
        vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
@@ -23,6 +25,7 @@
     </script>
     
     <canvas id="c"></canvas>
+    <script src="javascripts/canvas.js"></script>
     <script src="javascripts/code.js"></script>
   </body>
 </html>
