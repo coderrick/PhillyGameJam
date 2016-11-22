@@ -4,4 +4,4 @@ ctx.font = 'italic 18px Arial';
 ctx.textAlign = 'center';
 ctx. textBaseline = 'middle';
 ctx.fillStyle = 'red'; 
-ctx.fillText('Your Text', 150, 50);
+ctx.fillText('My Text', 150, 50);
