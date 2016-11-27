@@ -74,7 +74,7 @@ requestAnimationFrame(render);
 function render(){
   mesh.rotation.x += 0.01;
   mesh.rotation.y += 0.01;
-
+//camera rotation test
 //   mesh2.rotation.x += 0.01;
 //   mesh2.rotation.y += 0.01;
 
